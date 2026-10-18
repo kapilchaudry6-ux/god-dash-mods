@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <title>GOD MODS | Official Panel</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #070b14;
+      color: #f4f7ff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 22px 16px;
+      text-align: center;
+      border-bottom: 1px solid #123b55;
+      background: #090f1b;
+    }
+
+    .logo {
+      color: #31d7ff;
+      font-size: 29px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-shadow: 0 0 18px #087ca8;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #9caec5;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    main {
+      width: min(92%, 440px);
+      margin: 45px auto;
+    }
+
+    .panel {
+      background: linear-gradient(145deg, #101a2b, #0a101c);
+      border: 1px solid #174b68;
+      border-radius: 18px;
+      padding: 26px 20px;
+      box-shadow: 0 0 28px #008cff12;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #9caec5;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 9px;
+      color: #c9e9ff;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #25435d;
+      border-radius: 10px;
+      background: #070d17;
+      color: white;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #31d7ff;
+    }
+
+    button, .telegram {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 14px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .verify {
+      background: linear-gradient(90deg, #087cff, #20d9ff);
+      color: #04101a;
+    }
+
+    .happ {
+      background: #142638;
+      border: 1px solid #2386b5;
+      color: #58dfff;
+    }
+
+    .telegram {
+      background: #102a3d;
+      color: #67caff;
+      border: 1px solid #204c69;
+    }
+
+    .status {
+      color: #b8c9dc;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+      margin-top: 16px;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      text-align: center;
+      color: #71849b;
+      font-size: 12px;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #39ceff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">GOD MODS</div>
+    <p>OFFICIAL ACCESS PANEL</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1>Welcome Back</h1>
+
+      <p class="subtitle">
+        Enter your access key to continue.
+      </p>
+
+      <form id="keyForm">
+        <label for="accessKey">Access Key</label>
+
+        <input
+          id="accessKey"
+          type="text"
+          placeholder="Enter your key"
+          autocomplete="off"
+          required
+        >
+
+        <button class="verify" type="submit">
+          VERIFY KEY
+        </button>
+      </form>
+
+      <p id="status" class="status" aria-live="polite">
+        Connect to the official verification service.
+      </p>
+
+      <a
+        class="happ"
+        href="https://play.google.com/store/apps/details?id=com.happproxy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ADD TO HAPP
+      </a>
+
+      <a
+        class="telegram"
+        href="https://t.me/god_mods0"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        JOIN TELEGRAM CHANNEL
+      </a>
+
+      <a
+        class="telegram"
+        href="https://t.me/rolexraja"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        CONTACT ADMIN: @rolexraja
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> GOD MODS
+    <br><br>
+    Official Community Panel
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("keyForm").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+
+        document.getElementById("status").textContent =
+          "Key verification is not connected yet. Please wait for setup.";
+      }
+    );
+  </script>
+</body>
+  </html>
